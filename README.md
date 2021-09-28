@@ -63,12 +63,13 @@ that and also add some of our own.
 8. JWS Algorithm: *RSA Using SHA-256*
 9. Active Signing Certificate Key Id: *todokey*
 10. Show Advanced Fields
-11. Audience Claim Value: *<todo-service-host>:8082*
-12. JWKS Endpoint Path: /authtoken/jwks
-13. Under Access Token Attribute Contract, add a new attribute to extend the USER_KEY subject.
-14. Under Resource URIs, add a base resource uri, *https://<virtual-host-on-ping-access>:3000*
-15. Save
-16. Repeat steps 2-15 for Tweet Service.
+11. Issuer Claim Value: *https://pingfederate:9031*
+12. Audience Claim Value: *<todo-service-host>:8082*
+13. JWKS Endpoint Path: /todoauthtoken/jwks -- This needs to be unique for each token manager.
+14. Under Access Token Attribute Contract, add a new attribute to extend the USER_KEY subject.
+15. Under Resource URIs, add a base resource uri, *https://<virtual-host-on-ping-access>:3000*
+16. Save
+17. Repeat steps 2-15 for Tweet Service.
 
 *Access Token Mapping* -- This is needed to fulfill the access token attribute contracts.
 

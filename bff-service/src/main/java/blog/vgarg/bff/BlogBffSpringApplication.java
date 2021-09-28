@@ -21,7 +21,7 @@ import java.security.cert.X509Certificate;
 @SpringBootApplication
 public class BlogBffSpringApplication {
     public static void main(String[] args) {
-        setUpTrustStoreForApplication();
+//        setUpTrustStoreForApplication();
         SpringApplication.run(BlogBffSpringApplication.class, args);
     }
 

@@ -4,3 +4,14 @@ server:
     key-store: ./certs/localhost.p12
     key-store-type: PKCS12
     key-store-password: changeit
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://pingfederate:9031/ext/tweetauthtoken/jwks
+          issuer-uri: https://pingfederate:9031
+
+auth:
+  audience: vgarg.tweet.pa.local:8083
