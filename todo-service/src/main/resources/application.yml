@@ -6,10 +6,12 @@ server:
     key-store-password: changeit
 
 trust-store:
-  path: /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/conf/security/cacerts
+  path: /conf/security/cacerts
   password: changeit
 
 spring:
+  profiles:
+    active: local
   security:
     oauth2:
       resourceserver:
