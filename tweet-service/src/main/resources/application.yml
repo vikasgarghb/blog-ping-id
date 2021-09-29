@@ -5,7 +5,13 @@ server:
     key-store-type: PKCS12
     key-store-password: changeit
 
+trust-store:
+  path: /conf/security/cacerts
+  password: changeit
+
 spring:
+  profiles:
+    active: local
   security:
     oauth2:
       resourceserver:

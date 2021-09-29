@@ -21,7 +21,6 @@ import java.security.cert.X509Certificate;
 @SpringBootApplication
 public class BlogBffSpringApplication {
     public static void main(String[] args) {
-//        setUpTrustStoreForApplication();
         SpringApplication.run(BlogBffSpringApplication.class, args);
     }
 
@@ -49,10 +48,5 @@ public class BlogBffSpringApplication {
         RestTemplate restTemplate = new RestTemplate(requestFactory);
         restTemplate.getMessageConverters().add(formHttpMessageConverter);
         return restTemplate;
-    }
-
-    private static void setUpTrustStoreForApplication() {
-        System.setProperty("javax.net.ssl.trustStore", "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/conf/security/cacerts");
-        System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
     }
 }

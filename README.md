@@ -214,6 +214,15 @@ segments like `todo` and `tweet`.
 
 ### Start the services
 
+Before starting the todo and tweet service, add a file named `application-local.yml` under `src/main/resources` with
+following contents,
+
+```yaml
+trust-store:
+  path: <absolute path for java trust store>
+  password: <trust store password>
+```
+
 Either you can IDE to start all the services OR can start them individually from command line using the
 command `gradle bootRun`.
 
